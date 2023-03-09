@@ -12,10 +12,10 @@ public interface LineupService {
     /**
      * Syncs a list of people for a given line up.
      * Assume all the people are valid and exist in the database.
-     * Assume the line up is an existing lineup in the database
+     * Assume the lineup is an existing lineup in the database
      *
-     * Note that changes to the database are versioned, so we can just delete all the lineups for a given lineup and
-     * recreate the new lineup. This would cause people that are consistent between the incoming and existing lists to be
+     * Note that changes to the database are versioned, so we cannot just delete all the people for a given lineup and
+     * recreate the new lineup. This would cause people that are contained in the incoming and existing lists to be
      * versioned needlessly.
      *
      * @param lineupId The lineup id
